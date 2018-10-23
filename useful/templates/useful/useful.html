@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>{{title}}</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'home/css/style.css' %}" />
+    </head>
+    <body>
+
+        <!-- HEADER-->
+        <header>
+            <div class="flex_container container1">
+                <div class="felx_box box1_1">
+                    <a href="{% url 'homePage' %}">
+                        <img src="{% static 'home/img/bridge-logo.png' %}" alt="bridge-logo" width="70px" height="70px" style="object-fit:cover; border-radius:50%;">
+                    </a>
+                </div>
+               
+
+                <ul id="top_menu" class="flex_container container2">
+                    <li class="felx_box box2_1 ">
+                        <a href="{% url 'aboutPage' %}">About us</a>
+                    </li>
+                    <li class="felx_box box2_3">
+                        <a href="{% url 'reportPage' %}">活動報告</a>
+                    </li>
+                    <li class="felx_box box2_2">
+                        <a href="{% url 'realPage' %}">大学生のリアル</a>
+                    </li>
+                    <li class="felx_box box2_4 current">
+                        <a href="{% url 'usefulPage' %}">お役立ち</a>
+                    </li>
+                    <li class="felx_box box2_5">
+                        <a href="{% url 'sponsorshipPage' %}">連携団体</a>
+                    </li>
+                    <li class="felx_box box2_6">
+                        <a href="{% url 'contactPage' %}">お問い合わせ</a>
+                    </li>
+                </ul>
+            </div>
+
+            <ul id="top_menu_copied">
+                
+              <div class="box_b">
+                <li class="box2_1">
+                    <a href="{% url 'aboutPage' %}">About us</a>
+                </li>
+                <li class="box2_3">
+                    <a href="{% url 'reportPage' %}">活動報告</a>
+                </li>
+              </div>
+              <div class="box_b">
+                <li class="box2_2">
+                    <a href="{% url 'realPage' %}">大学生のリアル</a>
+                </li>
+                <li class="box2_4 current">
+                    <a href="{% url 'usefulPage' %}">お役立ち</a>
+                </li>
+              </div>
+              <div class="box_b">
+                <li class="box2_5">
+                    <a href="{% url 'sponsorshipPage' %}">連携団体</a>
+                </li>
+                <li class="box2_6">
+                    <a href="{% url 'contactPage' %}">お問い合わせ</a>
+                </li>
+              </div>
+            </ul>
+      
+        </header>
+        <!-- END-HEADER-->
+
+        <!-- MAIN-->
+        <main>
+            <section>
+                <img src="{% static 'home/img/header.jpg' %}" width="95%" alt="写真サイトへ">
+                <h1 class="state">{{title}}</h1>
+                <p>現在準備中です。しばらくお待ちください</p> 
+            </section> 
+
+            <ul>
+                <li>
+                    <a href="{% url 'useful-articlePage' 'consultation' %}">相談</a>
+                </li>
+                <li>
+                    <a href="{% url 'useful-articlePage' 'study' %}">勉強</a>
+                </li>
+                <li>
+                    <a href="{% url 'useful-articlePage' 'test' %}">受験</a>
+                </li>
+            </ul>
+        </main>
+        <!-- END-MAIN-->
+
+        <!-- FOOTER-->
+        <footer>
+            <ul>
+                <li>
+                <a href="mailto:bridge.univ.tohoku@gmail.com" arget="_blank">
+                    <img src="{% static 'home/img/mail.png' %}" width="20" height="20" alt="メール送信">
+                </a>
+                </li>
+                <li>
+                <a href="http://bridgeunivtohoku.wixsite.com/homepage" target="_blank">
+                    <img src="{% static 'home/img/blog.png' %}" width="20" height="20" alt="ブログサイトへ">
+                </a>
+                </li>
+                <li>
+                <a href="http://bridgeunivtohoku.wixsite.com/homepage" target="_blank">
+                    <img src="{% static 'home/img/photos.png' %}" width="20" height="20" alt="写真サイトへ">
+                <a>
+                </li>
+            </ul>
+            <p>(c) bridge-tohoku </p>
+        </footer>
+        <!-- END-FOOTER-->
+
+    </body>
+</html>
