@@ -1,2 +1,2 @@
-# bridge-sample
+# bridgeWebServise
 Using Django
